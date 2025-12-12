@@ -1,97 +1,107 @@
-import { useState } from "react";
-import QUESTIONS from "../data/questions";
+import React, { useState } from "react";
+import { questions } from "../data/questions";
 
-export default function QuizPage() {
-  const [step, setStep] = useState("select");
-  const [numQuestions, setNumQuestions] = useState(5);
+const QuizPage = () => {
+  const [quizLength, setQuizLength] = useState(null);
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
+  const [showScore, setShowScore] = useState(false);
 
-  const quizQuestions = QUESTIONS.slice(0, numQuestions);
+  // Slice the questions based on chosen length
+  const quizQuestions = quizLength ? questions.slice(0, quizLength) : [];
 
-  function checkAnswer(opt) {
-    if (opt === quizQuestions[current].answer) setScore(score + 1);
+  const handleAnswer = (isCorrect) => {
+    if (isCorrect) setScore(score + 1);
 
-    if (current + 1 === numQuestions) setStep("result");
-    else setCurrent(current + 1);
-  }
+    const next = current + 1;
+    if (next < quizQuestions.length) {
+      setCurrent(next);
+    } else {
+      setShowScore(true);
+    }
+  };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#020d11] text-white px-6 py-10">
+    
+    <div className="min-h-screen  text-white px-10 pt-28 pb-10">
 
-      {/* STEP 1 — SELECT QUESTION COUNT */}
-      {step === "select" && (
-        <div className="bg-white/10 backdrop-blur-md px-12 py-10 rounded-2xl shadow-xl border border-white/20 text-center">
-          <h1 className="text-3xl font-bold mb-6">Choose Quiz Length</h1>
+      <h1 className="text-4xl font-bold mb-10">Space Quiz</h1>
 
-          <div className="flex gap-4 justify-center">
-            {[5, 10, 15].map((n) => (
+      {/* STEP 1: QUIZ LENGTH SELECTION */}
+      {!quizLength && (
+        <div className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
+                        backdrop-blur-md max-w-xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Choose Quiz Length</h2>
+
+          <div className="flex justify-center gap-6">
+            {[5, 10, 15, 20].map((length) => (
               <button
-                key={n}
-                onClick={() => {
-                  setNumQuestions(n);
-                  setStep("quiz");
-                }}
-                className="px-6 py-3 rounded-xl bg-teal-700 hover:bg-teal-600
-                           text-white shadow-lg transition font-semibold"
+                key={length}
+                onClick={() => setQuizLength(length)}
+                className="px-5 py-3 bg-gray-500/40 border border-gray-400 rounded-xl 
+                           hover:bg-gray-500/60 hover:scale-105 transition font-medium"
               >
-                {n} Questions
+                {length} Questions
               </button>
             ))}
           </div>
         </div>
       )}
 
-      {/* STEP 2 — QUIZ */}
-      {step === "quiz" && (
-        <div className="w-full max-w-2xl bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-10 shadow-xl">
+      {/* STEP 2: QUIZ QUESTIONS */}
+      {quizLength && !showScore && (
+        <div className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
+                        backdrop-blur-md max-w-2xl mx-auto mt-10">
 
-          <h2 className="text-xl font-bold mb-2">
-            Question {current + 1} / {numQuestions}
+          <h2 className="text-2xl font-bold mb-6">
+            {quizQuestions[current].question}
           </h2>
 
-          <p className="text-lg mb-8">{quizQuestions[current].question}</p>
-
-          <div className="grid gap-4">
-            {quizQuestions[current].options.map((opt, i) => (
+          <div className="grid grid-cols-1 gap-4">
+            {quizQuestions[current].options.map((option, index) => (
               <button
-                key={i}
-                onClick={() => checkAnswer(opt)}
-                className="w-full py-3 rounded-xl bg-teal-800/80 hover:bg-teal-700
-                           text-white shadow transition font-medium"
+                key={index}
+                onClick={() => handleAnswer(option.isCorrect)}
+                className="w-full text-left px-5 py-3 bg-gray-500/40 border border-gray-400 
+                           rounded-xl hover:bg-gray-500/60 transition"
               >
-                {opt}
+                {option.text}
               </button>
             ))}
           </div>
 
+          <p className="text-gray-300 mt-6 text-right">
+            Question {current + 1} / {quizQuestions.length}
+          </p>
         </div>
       )}
 
-      {/* STEP 3 — RESULT */}
-      {step === "result" && (
-        <div className="bg-white/10 backdrop-blur-md px-12 py-10 rounded-2xl shadow-xl border border-white/20 text-center">
-
-          <h1 className="text-3xl font-bold mb-4">Quiz Completed!</h1>
-          <p className="text-xl mb-6 font-medium">
-            Your Score: {score} / {numQuestions}
+      {/* STEP 3: SCORE SCREEN */}
+      {quizLength && showScore && (
+        <div className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
+                        backdrop-blur-md max-w-lg mx-auto text-center mt-10">
+          <h2 className="text-3xl font-bold mb-4">Quiz Completed!</h2>
+          <p className="text-xl mb-6">
+            You scored <strong>{score}</strong> / {quizQuestions.length}
           </p>
 
           <button
+            className="px-5 py-3 bg-gray-500/40 border border-gray-400 
+                       rounded-xl hover:bg-gray-500/60 transition"
             onClick={() => {
-              setStep("select");
+              setQuizLength(null);
               setCurrent(0);
               setScore(0);
+              setShowScore(false);
             }}
-            className="px-6 py-3 rounded-xl bg-teal-700 hover:bg-teal-600
-                       text-white font-semibold shadow-lg transition"
           >
-            Try Again
+            Restart Quiz
           </button>
-
         </div>
       )}
 
     </div>
   );
-}
+};
+
+export default QuizPage;
