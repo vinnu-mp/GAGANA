@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
     <div className="main">
       <div className="bg-img">
         <WarpBackground />
+        
       </div>
       <Navbar />
       {children}
