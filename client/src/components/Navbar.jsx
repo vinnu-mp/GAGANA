@@ -69,7 +69,7 @@ export default function Navbar() {
         </Link>
         <Link
           ref={(el) => (navLinksRef.current[2] = el)}
-          to="/Linki"
+          to="/ai"
           className="hover:text-gray-200 transition nav-link"
         >
           AI

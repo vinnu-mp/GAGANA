@@ -3,7 +3,7 @@
 .bg-img {
   position: fixed;
   inset: 0;
-  background-color: rgb(84, 84, 84);
+  background-image: url("/animations/background-large.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
