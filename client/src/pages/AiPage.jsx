@@ -1,39 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-
-const SPACE_KEYWORDS = [
-  "space",
-  "planet",
-  "star",
-  "galaxy",
-  "nebula",
-  "mars",
-  "moon",
-  "jupiter",
-  "saturn",
-  "venus",
-  "uranus",
-  "neptune",
-  "supernova",
-  "black hole",
-  "asteroid",
-  "cosmos",
-  "universe",
-  "isro",
-  "nasa",
-  "solar",
-  "orbit",
-  "milky way",
-  "comet",
-];
-
-function isSpaceRelated(text) {
-  if (!text) return false;
-  const t = text.toLowerCase();
-  return SPACE_KEYWORDS.some((k) => t.includes(k));
-}
+import ReactMarkdown from "react-markdown";
 
 export default function AiPage() {
-  // Load chat from local storage
   const [messages, setMessages] = useState(() => {
     const saved = localStorage.getItem("gagana_chat_v1");
     return saved ? JSON.parse(saved) : [];
@@ -43,31 +11,19 @@ export default function AiPage() {
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef(null);
 
-  // Save chat history automatically
   useEffect(() => {
     localStorage.setItem("gagana_chat_v1", JSON.stringify(messages));
   }, [messages]);
 
-  // Auto scroll to bottom
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, loading]);
+  }, [messages]);
 
   const sendMessage = async () => {
     if (!input.trim()) return;
 
     const userMsg = { sender: "user", text: input.trim() };
     setMessages((prev) => [...prev, userMsg]);
-
-    // space filter
-    if (!isSpaceRelated(input)) {
-      setMessages((prev) => [
-        ...prev,
-        { sender: "ai", text: "Please ask only space-related questions 🌌" },
-      ]);
-      setInput("");
-      return;
-    }
 
     setInput("");
     setLoading(true);
@@ -84,7 +40,6 @@ export default function AiPage() {
 
       setMessages((prev) => [...prev, { sender: "ai", text: reply }]);
     } catch (err) {
-      console.log(err);
       setMessages((prev) => [
         ...prev,
         { sender: "ai", text: "AI is unavailable at the moment." },
@@ -111,7 +66,13 @@ export default function AiPage() {
                 : "bg-gray-800 text-gray-200"
             }`}
           >
-            {m.text}
+            {m.sender === "ai" ? (
+              <div className="prose prose-invert max-w-none">
+                <ReactMarkdown>{m.text}</ReactMarkdown>
+              </div>
+            ) : (
+              m.text
+            )}
           </div>
         ))}
 
