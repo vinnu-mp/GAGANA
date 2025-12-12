@@ -3,11 +3,12 @@
 .bg-img {
   position: fixed;
   inset: 0;
-  background-color: rgb(84, 84, 84);
+  background-image: url("/animations/background-large.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -2;
+  pointer-events: none !important;
 }
 
 .nav-link {
@@ -32,4 +33,37 @@
 
 .card-info {
   @apply opacity-90 text-sm leading-relaxed;
+}
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  transition: 0.2s;
+}
+
+.auth-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px #3b82f6;
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+}
+
+.auth-btn:hover {
+  background: #1e40af;
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.8);
 }
