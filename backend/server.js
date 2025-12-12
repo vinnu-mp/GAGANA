@@ -1,24 +1,16 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import askRoute from "./routes/askRoute.js";
-import nodemailer from "nodemailer";
-
-
-dotenv.config();
+const express = require("express");
+const cors = require("cors");
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const app = express();
+app.use(cors());
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173" })); // Vite default origin
 
-app.get("/", (req, res) => res.send("GAGANA Backend running 🚀"));
-
-app.use("/api/ask", askRoute);
 let storedOTP = "";
 
 app.post("/send-otp", async (req, res) => {
   const { email } = req.body;
-
   storedOTP = Math.floor(100000 + Math.random() * 900000).toString();
 
   const transporter = nodemailer.createTransport({
@@ -46,15 +38,8 @@ app.post("/send-otp", async (req, res) => {
 app.post("/verify-otp", (req, res) => {
   const { otp } = req.body;
 
-  if (otp === storedOTP) {
-    return res.json({ success: true });
-  }
-
+  if (otp === storedOTP) return res.json({ success: true });
   res.json({ success: false });
 });
 
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
-);
+app.listen(5000, () => console.log("OTP server running on port 5000"));

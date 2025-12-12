@@ -5,9 +5,40 @@ export default function News() {
   const [news, setNews] = useState([]);
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(false);
+
+  // NASA Image of the Day state
+  const [apod, setApod] = useState(null);
+  const [apodError, setApodError] = useState(false);
+
   const LIMIT = 10;
 
-  // Fetch API
+  // -------------------------------
+  // FETCH NASA IMAGE OF THE DAY
+  // -------------------------------
+  const fetchApod = async () => {
+    try {
+      const res = await fetch(
+        `https://api.nasa.gov/planetary/apod?api_key=ZpXUZeC3wKeEomXq3AFHunWkj8Z7VJGaVO7iHlhs`
+      );
+
+      const data = await res.json();
+
+      if (data.code === 403) {
+        console.error("Invalid NASA API Key");
+        setApodError(true);
+        return;
+      }
+
+      setApod(data);
+    } catch (err) {
+      console.error("Error fetching APOD:", err);
+      setApodError(true);
+    }
+  };
+
+  // -------------------------------
+  // FETCH SPACE NEWS
+  // -------------------------------
   const fetchNews = async () => {
     setLoading(true);
 
@@ -17,8 +48,6 @@ export default function News() {
       );
 
       const data = await res.json();
-
-      // Append new articles
       setNews((prev) => [...prev, ...data.results]);
     } catch (err) {
       console.error("Error fetching news:", err);
@@ -27,17 +56,56 @@ export default function News() {
     setLoading(false);
   };
 
-  // Load on first mount
+  // Load NASA APOD on first mount
+  useEffect(() => {
+    fetchApod();
+  }, []);
+
+  // Load NEWS on offset change
   useEffect(() => {
     fetchNews();
   }, [offset]);
 
-  const loadMore = () => {
-    setOffset((prev) => prev + LIMIT);
-  };
+  const loadMore = () => setOffset((prev) => prev + LIMIT);
 
   return (
     <section className="pt-24 px-6 md:px-20 text-white min-h-screen">
+
+      {/* NASA IMAGE OF THE DAY */}
+      {apod && !apodError && (
+        <div className="mb-12 bg-gray-900/60 rounded-2xl shadow-lg overflow-hidden border border-white/10">
+          <img
+            src={apod.url}
+            alt={apod.title}
+            className="w-full max-h-[420px] object-cover"
+          />
+
+          <div className="p-6">
+            <h2 className="text-3xl font-bold mb-2">Image of the Day</h2>
+            <p className="text-xl font-semibold mb-1">{apod.title}</p>
+            <p className="text-sm opacity-75 mb-4">
+              {new Date(apod.date).toDateString()}
+            </p>
+            <p className="opacity-90 mb-4">{apod.explanation}</p>
+
+            <a
+              href={apod.hdurl || apod.url}
+              target="_blank"
+              className="inline-block px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
+            >
+              View Full Image
+            </a>
+          </div>
+        </div>
+      )}
+
+      {apodError && (
+        <p className="opacity-60 mb-10">
+          NASA Image of the Day could not be loaded. (Check API key)
+        </p>
+      )}
+
+      {/* NEWS SECTION TITLE */}
       <h1 className="text-4xl font-bold mb-8">Latest Space News</h1>
 
       {/* NEWS GRID */}
