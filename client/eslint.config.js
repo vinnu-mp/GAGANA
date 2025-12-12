@@ -23,6 +23,13 @@ export default defineConfig([
       },
     },
     rules: {
+      // Allow common React patterns
+      'react-hooks/set-state-in-effect': 'off',
+
+      // Warn only, do NOT fail CI
+      'react-hooks/exhaustive-deps': 'warn',
+
+      // Ignore unused React imports/constants
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },

@@ -39,12 +39,15 @@ export default function AiPage() {
       const reply = data.reply || "I couldn't fetch a response.";
 
       setMessages((prev) => [...prev, { sender: "ai", text: reply }]);
-    } catch (err) {
-      setMessages((prev) => [
-        ...prev,
-        { sender: "ai", text: "AI is unavailable at the moment." },
-      ]);
-    }
+    }catch (err) {
+  console.error(err);
+  setMessages((prev) => [
+    ...prev,
+    { sender: "ai", text: "AI is unavailable at the moment." },
+  ]);
+}
+ 
+    
 
     setLoading(false);
   };
