@@ -6,8 +6,8 @@ export const questions = [
       { text: "Earth", isCorrect: false },
       { text: "Mars", isCorrect: true },
       { text: "Jupiter", isCorrect: false },
-      { text: "Venus", isCorrect: false }
-    ]
+      { text: "Venus", isCorrect: false },
+    ],
   },
 
   // 2
@@ -17,8 +17,8 @@ export const questions = [
       { text: "Andromeda", isCorrect: false },
       { text: "Milky Way", isCorrect: true },
       { text: "Whirlpool", isCorrect: false },
-      { text: "Sombrero", isCorrect: false }
-    ]
+      { text: "Sombrero", isCorrect: false },
+    ],
   },
 
   // 3
@@ -28,8 +28,8 @@ export const questions = [
       { text: "Buzz Aldrin", isCorrect: false },
       { text: "Neil Armstrong", isCorrect: true },
       { text: "Yuri Gagarin", isCorrect: false },
-      { text: "Alan Shepard", isCorrect: false }
-    ]
+      { text: "Alan Shepard", isCorrect: false },
+    ],
   },
 
   // 4
@@ -39,8 +39,8 @@ export const questions = [
       { text: "Jupiter", isCorrect: false },
       { text: "Saturn", isCorrect: true },
       { text: "Uranus", isCorrect: false },
-      { text: "Neptune", isCorrect: false }
-    ]
+      { text: "Neptune", isCorrect: false },
+    ],
   },
 
   // 5
@@ -50,8 +50,8 @@ export const questions = [
       { text: "Sirius", isCorrect: false },
       { text: "Alpha Centauri", isCorrect: false },
       { text: "The Sun", isCorrect: true },
-      { text: "Proxima Centauri", isCorrect: false }
-    ]
+      { text: "Proxima Centauri", isCorrect: false },
+    ],
   },
 
   // 6
@@ -61,8 +61,8 @@ export const questions = [
       { text: "1 second", isCorrect: false },
       { text: "8 minutes", isCorrect: true },
       { text: "30 minutes", isCorrect: false },
-      { text: "1 hour", isCorrect: false }
-    ]
+      { text: "1 hour", isCorrect: false },
+    ],
   },
 
   // 7
@@ -72,8 +72,8 @@ export const questions = [
       { text: "Earth", isCorrect: false },
       { text: "Saturn", isCorrect: false },
       { text: "Neptune", isCorrect: true },
-      { text: "Mars", isCorrect: false }
-    ]
+      { text: "Mars", isCorrect: false },
+    ],
   },
 
   // 8
@@ -83,8 +83,8 @@ export const questions = [
       { text: "Saturn", isCorrect: false },
       { text: "Jupiter", isCorrect: true },
       { text: "Uranus", isCorrect: false },
-      { text: "Neptune", isCorrect: false }
-    ]
+      { text: "Neptune", isCorrect: false },
+    ],
   },
 
   // 9
@@ -94,8 +94,8 @@ export const questions = [
       { text: "Uranus", isCorrect: false },
       { text: "Neptune", isCorrect: false },
       { text: "Saturn", isCorrect: true },
-      { text: "Jupiter", isCorrect: false }
-    ]
+      { text: "Jupiter", isCorrect: false },
+    ],
   },
 
   // 10
@@ -105,8 +105,8 @@ export const questions = [
       { text: "Ozone layer", isCorrect: false },
       { text: "Magnetic field", isCorrect: true },
       { text: "Clouds", isCorrect: false },
-      { text: "Mountains", isCorrect: false }
-    ]
+      { text: "Mountains", isCorrect: false },
+    ],
   },
 
   // 11
@@ -116,8 +116,8 @@ export const questions = [
       { text: "Whirlpool Galaxy", isCorrect: false },
       { text: "Sombrero Galaxy", isCorrect: false },
       { text: "Andromeda Galaxy", isCorrect: true },
-      { text: "Triangulum Galaxy", isCorrect: false }
-    ]
+      { text: "Triangulum Galaxy", isCorrect: false },
+    ],
   },
 
   // 12
@@ -127,8 +127,8 @@ export const questions = [
       { text: "Kepler", isCorrect: false },
       { text: "Hubble", isCorrect: true },
       { text: "Spitzer", isCorrect: false },
-      { text: "James Webb", isCorrect: false }
-    ]
+      { text: "James Webb", isCorrect: false },
+    ],
   },
 
   // 13
@@ -138,8 +138,8 @@ export const questions = [
       { text: "Neptune", isCorrect: false },
       { text: "Uranus", isCorrect: true },
       { text: "Mars", isCorrect: false },
-      { text: "Earth", isCorrect: false }
-    ]
+      { text: "Earth", isCorrect: false },
+    ],
   },
 
   // 14
@@ -149,8 +149,8 @@ export const questions = [
       { text: "Saturn", isCorrect: false },
       { text: "Jupiter", isCorrect: true },
       { text: "Neptune", isCorrect: false },
-      { text: "Mars", isCorrect: false }
-    ]
+      { text: "Mars", isCorrect: false },
+    ],
   },
 
   // 15
@@ -160,8 +160,8 @@ export const questions = [
       { text: "Apollo 11", isCorrect: false },
       { text: "Sputnik 1", isCorrect: true },
       { text: "Voyager 1", isCorrect: false },
-      { text: "ISS", isCorrect: false }
-    ]
+      { text: "ISS", isCorrect: false },
+    ],
   },
 
   // 16
@@ -171,8 +171,8 @@ export const questions = [
       { text: "Jupiter", isCorrect: false },
       { text: "Uranus", isCorrect: true },
       { text: "Mars", isCorrect: false },
-      { text: "Venus", isCorrect: false }
-    ]
+      { text: "Venus", isCorrect: false },
+    ],
   },
 
   // 17
@@ -182,8 +182,8 @@ export const questions = [
       { text: "Mercury", isCorrect: false },
       { text: "Venus", isCorrect: true },
       { text: "Earth", isCorrect: false },
-      { text: "Mars", isCorrect: false }
-    ]
+      { text: "Mars", isCorrect: false },
+    ],
   },
 
   // 18
@@ -193,8 +193,8 @@ export const questions = [
       { text: "Voyager 1", isCorrect: true },
       { text: "Pioneer 10", isCorrect: false },
       { text: "Cassini", isCorrect: false },
-      { text: "New Horizons", isCorrect: false }
-    ]
+      { text: "New Horizons", isCorrect: false },
+    ],
   },
 
   // 19
@@ -204,8 +204,8 @@ export const questions = [
       { text: "Mercury", isCorrect: false },
       { text: "Venus", isCorrect: true },
       { text: "Mars", isCorrect: false },
-      { text: "Earth", isCorrect: false }
-    ]
+      { text: "Earth", isCorrect: false },
+    ],
   },
 
   // 20
@@ -215,7 +215,7 @@ export const questions = [
       { text: "Magnetism", isCorrect: false },
       { text: "Gravity", isCorrect: true },
       { text: "Friction", isCorrect: false },
-      { text: "Solar wind", isCorrect: false }
-    ]
-  }
+      { text: "Solar wind", isCorrect: false },
+    ],
+  },
 ];

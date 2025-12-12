@@ -32,7 +32,7 @@ export default function VerifyOtp() {
           Verify OTP
         </h2>
 
-        <input 
+        <input
           className="auth-input"
           placeholder="Enter OTP"
           onChange={(e) => setOtp(e.target.value)}

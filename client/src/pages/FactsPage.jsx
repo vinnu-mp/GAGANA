@@ -8,10 +8,8 @@ const FactsPage = () => {
 
   return (
     <div className="min-h-screen text-white px-10 pt-28 pb-10">
-
       {/* HEADER WITH TOGGLE */}
       <div className="flex items-center justify-between mb-10">
-        
         {/* Facts Tab */}
         <h1
           className={`text-4xl font-bold cursor-pointer transition ${

@@ -22,15 +22,15 @@ const QuizPage = () => {
   };
 
   return (
-    
     <div className="min-h-screen  text-white px-10 pt-28 pb-10">
-
       <h1 className="text-4xl font-bold mb-10">Space Quiz</h1>
 
       {/* STEP 1: QUIZ LENGTH SELECTION */}
       {!quizLength && (
-        <div className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
-                        backdrop-blur-md max-w-xl mx-auto text-center">
+        <div
+          className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
+                        backdrop-blur-md max-w-xl mx-auto text-center"
+        >
           <h2 className="text-3xl font-bold mb-6">Choose Quiz Length</h2>
 
           <div className="flex justify-center gap-6">
@@ -50,9 +50,10 @@ const QuizPage = () => {
 
       {/* STEP 2: QUIZ QUESTIONS */}
       {quizLength && !showScore && (
-        <div className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
-                        backdrop-blur-md max-w-2xl mx-auto mt-10">
-
+        <div
+          className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
+                        backdrop-blur-md max-w-2xl mx-auto mt-10"
+        >
           <h2 className="text-2xl font-bold mb-6">
             {quizQuestions[current].question}
           </h2>
@@ -78,8 +79,10 @@ const QuizPage = () => {
 
       {/* STEP 3: SCORE SCREEN */}
       {quizLength && showScore && (
-        <div className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
-                        backdrop-blur-md max-w-lg mx-auto text-center mt-10">
+        <div
+          className="bg-gray-600/40 shadow-xl p-8 rounded-xl border border-gray-500 
+                        backdrop-blur-md max-w-lg mx-auto text-center mt-10"
+        >
           <h2 className="text-3xl font-bold mb-4">Quiz Completed!</h2>
           <p className="text-xl mb-6">
             You scored <strong>{score}</strong> / {quizQuestions.length}
@@ -99,7 +102,6 @@ const QuizPage = () => {
           </button>
         </div>
       )}
-
     </div>
   );
 };

@@ -41,7 +41,10 @@ export default function OtpAuth() {
             value={otp}
             onChange={(e) => setOtp(e.target.value)}
           />
-          <button className="bg-green-600 px-4 py-2 rounded" onClick={verifyOTP}>
+          <button
+            className="bg-green-600 px-4 py-2 rounded"
+            onClick={verifyOTP}
+          >
             Verify
           </button>
         </div>

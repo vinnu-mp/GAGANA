@@ -18,7 +18,7 @@ export default function News() {
   const fetchApod = async () => {
     try {
       const res = await fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=ZpXUZeC3wKeEomXq3AFHunWkj8Z7VJGaVO7iHlhs`
+        `https://api.nasa.gov/planetary/apod?api_key=ZpXUZeC3wKeEomXq3AFHunWkj8Z7VJGaVO7iHlhs`,
       );
 
       const data = await res.json();
@@ -44,7 +44,7 @@ export default function News() {
 
     try {
       const res = await fetch(
-        `https://api.spaceflightnewsapi.net/v4/articles/?limit=${LIMIT}&offset=${offset}`
+        `https://api.spaceflightnewsapi.net/v4/articles/?limit=${LIMIT}&offset=${offset}`,
       );
 
       const data = await res.json();
@@ -70,7 +70,6 @@ export default function News() {
 
   return (
     <section className="pt-24 px-6 md:px-20 text-white min-h-screen">
-
       {/* NASA IMAGE OF THE DAY */}
       {apod && !apodError && (
         <div className="mb-12 bg-gray-900/60 rounded-2xl shadow-lg overflow-hidden border border-white/10">

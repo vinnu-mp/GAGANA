@@ -12,13 +12,11 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import VerifyOtp from "./pages/VerifyOtp";
 
-
 const Layout = ({ children }) => {
   return (
     <div className="main">
       <div className="bg-img">
         <WarpBackground />
-        
       </div>
       <Navbar />
       {children}
@@ -31,14 +29,49 @@ const App = () => {
     <Routes>
       {/* Pages with navbar */}
       <Route path="/login" element={<Login />} />
-<Route path="/signup" element={<Signup />} />
-<Route path="/verify-otp" element={<VerifyOtp />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/verify-otp" element={<VerifyOtp />} />
 
-      <Route path="/" element={<Layout><Home /></Layout>} />
-      <Route path="/news" element={<Layout><News /></Layout>} />
-      <Route path="/quiz" element={<Layout><QuizPage /></Layout>} />
-      <Route path="/facts" element={<Layout><FactsPage /></Layout>} />
-      <Route path="/ai" element={<Layout><AiPage /></Layout>} />
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <Home />
+          </Layout>
+        }
+      />
+      <Route
+        path="/news"
+        element={
+          <Layout>
+            <News />
+          </Layout>
+        }
+      />
+      <Route
+        path="/quiz"
+        element={
+          <Layout>
+            <QuizPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/facts"
+        element={
+          <Layout>
+            <FactsPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/ai"
+        element={
+          <Layout>
+            <AiPage />
+          </Layout>
+        }
+      />
 
       {/* OTP PAGE – NO NAVBAR, NO OVERLAY */}
       <Route path="/otp" element={<OtpAuth />} />
