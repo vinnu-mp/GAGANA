@@ -23,7 +23,11 @@ export default function VerifyOtp() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="bgimg h-screen w-full flex items-center justify-center relative text-white">
+=======
+    <div className="h-screen w-full flex items-center justify-center bgimg relative text-white">
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
       <div className="absolute inset-0 bg-[url('/nebula-bg.jpg')] bg-cover bg-center"></div>
       <div className="absolute inset-0 backdrop-blur-sm"></div>
 

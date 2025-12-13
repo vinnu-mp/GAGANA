@@ -12,7 +12,11 @@ const FactsPage = () => {
       <div className="flex items-center justify-between mb-10">
         {/* Facts Tab */}
         <h1
+<<<<<<< HEAD
           className={`text-3xl font-bold cursor-pointer transition ${
+=======
+          className={`pl-4 text-3xl font-bold cursor-pointer transition ${
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
             view === "facts"
               ? "underline underline-offset-8"
               : "opacity-60 hover:opacity-100"
@@ -24,14 +28,18 @@ const FactsPage = () => {
 
         {/* Space Components Tab */}
         <h1
+<<<<<<< HEAD
           className={`text-3xl font-bold cursor-pointer transition ${
+=======
+          className={`pr-4 text-3xl font-bold cursor-pointer transition ${
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
             view === "components"
               ? "underline underline-offset-8"
               : "opacity-60 hover:opacity-100"
           }`}
           onClick={() => setView("components")}
         >
-          Space Components
+          Space Explorers
         </h1>
       </div>
 

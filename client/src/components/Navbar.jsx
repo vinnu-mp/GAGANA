@@ -12,19 +12,17 @@ export default function Navbar() {
   const navLinksRef = useRef([]);
   navLinksRef.current = [];
 
-  //   useGSAP(() => {
-  //     const ctx = gsap.context(() => {
-  //       gsap.from(navLinksRef.current, {
-  //         y: 30,
-  //         opacity: 0,
-  //         duration: 0.6,
-  //         ease: "power2.out",
-  //         stagger: 0.15,
-  //       });
+  // useGSAP(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.from(navLinksRef.current, {
+  //       y: 30,
+  //       opacity: 0,
+  //       duration: 0.6,
+  //       ease: "power2.out",
+  //       stagger: 0.15,
   //     });
-
-  //     return () => ctx.revert(); // prevents flicker on re-render
-  //   }, []);
+  //   }); // prevents flicker on re-render
+  // }, []);
 
   return (
     <nav
@@ -51,42 +49,46 @@ export default function Navbar() {
         <Link
           ref={(el) => (navLinksRef.current[0] = el)}
           to="/news"
-          className="hover:text-gray-200 transition nav-link"
+          className="hover:text-gray-200 hover:scale-115 nav-link active:scale-125"
         >
           News
         </Link>
         <Link
           ref={(el) => (navLinksRef.current[1] = el)}
           to="/facts"
-          className="hover:text-gray-200 transition nav-link"
+          className="hover:text-gray-200 transition nav-link hover:scale-115"
         >
           Facts
         </Link>
         <Link
           ref={(el) => (navLinksRef.current[2] = el)}
           to="https://w21030911.nuwebspace.co.uk/graphics/assessment/"
+<<<<<<< HEAD
           className="hover:text-gray-200 transition nav-link"
+=======
+          className="hover:text-gray-200 transition nav-link hover:scale-115"
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
         >
           3D Solar
         </Link>
         <Link
           ref={(el) => (navLinksRef.current[2] = el)}
           to="/ai"
-          className="hover:text-gray-200 transition nav-link"
+          className="hover:text-gray-200 transition nav-link hover:scale-115"
         >
           AI
         </Link>
         <Link
           ref={(el) => (navLinksRef.current[3] = el)}
           to="/quiz"
-          className="hover:text-gray-200 transition nav-link"
+          className="hover:text-gray-200 transition nav-link hover:scale-115"
         >
           Quiz
         </Link>
         <Link
           ref={(el) => (navLinksRef.current[4] = el)}
           to="/profile"
-          className="hover:text-gray-200 transition nav-link"
+          className="hover:text-gray-200 transition nav-link hover:scale-115"
         >
           Profile
         </Link>
@@ -138,13 +140,18 @@ export default function Navbar() {
           >
             Facts
           </Link>
+<<<<<<< HEAD
           <Link
             to="https://w21030911.nuwebspace.co.uk/graphics/assessment/"
+=======
+          <a
+            href="https://w21030911.nuwebspace.co.uk/graphics/assessment/"
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
             className="text-white hover:text-gray-200"
             onClick={() => setOpen(false)}
           >
             3D Solar
-          </Link>
+          </a>
           <Link
             to="/quiz"
             className="text-white hover:text-gray-200"

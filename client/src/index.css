@@ -10,6 +10,7 @@
   z-index: -2;
   pointer-events: none !important;
 }
+<<<<<<< HEAD
 
 .title {
   font-family: "Iceland", sans-serif;
@@ -20,6 +21,14 @@
 
 .bgimg {
   background-image: url("/animations/background-large.jpg");
+=======
+.bgimg {
+  background-image: url("/animations/background-large.jpg");
+}
+
+.boxx {
+  align-items: space-between;
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
 }
 
 .nav-link {

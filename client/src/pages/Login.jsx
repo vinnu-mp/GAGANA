@@ -65,7 +65,11 @@ export default function Login() {
 
   return (
     <div className="h-screen bgimg w-full flex items-center justify-center relative text-white">
+<<<<<<< HEAD
       <div className="auth-card bg-white/10 relative z-10 p-8 w-96 rounded-2xl">
+=======
+      <div className="auth-card relative z-10 p-8 w-96 rounded-2xl">
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
         <h2 className="text-3xl mb-6 text-center font-semibold tracking-wide">
           Login
         </h2>
@@ -76,6 +80,7 @@ export default function Login() {
           placeholder="Email"
           onChange={handleChange}
         />
+<<<<<<< HEAD
 
         <input
           className="auth-input"
@@ -91,6 +96,22 @@ export default function Login() {
           Continue
         </button>
 
+=======
+        <input
+          className="auth-input"
+          name="password"
+          type="password"
+          placeholder="Password"
+          onChange={handleChange}
+        />
+
+        {error && <p className="text-red-400 text-center py-2">{error}</p>}
+
+        <button className="auth-btn" onClick={submitLogin}>
+          Continue
+        </button>
+
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
         <p
           className="mt-4 text-center text-blue-300 cursor-pointer"
           onClick={() => navigate("/signup")}

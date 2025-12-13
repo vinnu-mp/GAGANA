@@ -16,7 +16,11 @@ export default function Signup() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="bgimg h-screen w-full flex items-center justify-center relative text-white">
+=======
+    <div className="h-screen w-full bgimg flex items-center justify-center relative text-white">
+>>>>>>> 1f207d1b6dcee03e6384cbf6e487abc92249d6ec
       {/* 🌌 Background Image */}
 
       <div className="absolute inset-0 -z-10 bg-[url('/space-bg.jpg')] bg-cover bg-center"></div>
