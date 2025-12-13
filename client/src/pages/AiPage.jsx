@@ -22,6 +22,10 @@ export default function AiPage() {
   const sendMessage = async () => {
     if (!input.trim()) return;
 
+    // ✅ STEP 3: Increment AI chat count (USER message only)
+    const currentChats = Number(localStorage.getItem("aiChats")) || 0;
+    localStorage.setItem("aiChats", currentChats + 1);
+
     const userMsg = { sender: "user", text: input.trim() };
     setMessages((prev) => [...prev, userMsg]);
 
