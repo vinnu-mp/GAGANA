@@ -6,97 +6,97 @@ export const components = [
   },
   {
     name: "James Webb Space Telescope",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Jwst_artist_render.png",
+    image: "https://images.prismic.io/igspace/13d0c316-0a7f-45e5-b204-ac296572ceeb_JWT+2.jpg?auto=compress%2Cformat",
     info: "JWST is the most advanced infrared observatory ever built. It studies the first galaxies formed after the Big Bang and detects atmospheres of distant exoplanets. Its golden mirror and sunshield let it observe objects billions of light-years away."
   },
   {
     name: "Voyager 1",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/df/Voyager.jpg",
+    image: "https://cdn.mos.cms.futurecdn.net/2rzDuuKcnCjrLPrZnPE4qE.jpg",
     info: "Voyager 1 was launched in 1977 to explore the outer planets. It is now the farthest human-made object, having entered interstellar space in 2012. The spacecraft carries the iconic Golden Record for any extraterrestrial civilizations."
   },
   {
     name: "Voyager 2",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Voyager_spacecraft_model.png",
+    image: "https://gizmodo.com/app/uploads/2019/11/cv2vseo7dvwrtbiuh2ws.jpg",
     info: "Voyager 2 is the only spacecraft to have flown past Uranus and Neptune. Launched in 1977, it discovered new moons, rings, and atmospheric details. It entered interstellar space in 2018, continuing to send data back to Earth."
   },
   {
     name: "International Space Station (ISS)",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d3/STS-132_International_Space_Station_after_undocking.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Iss_after_installation_of_all_roll_out_solar_arrays.jpg/960px-Iss_after_installation_of_all_roll_out_solar_arrays.jpg",
     info: "The ISS is a modular research station orbiting Earth since 1998. It serves as a microgravity laboratory where astronauts study biology, physics, medicine, and space engineering. It represents global cooperation among multiple space agencies."
   },
   {
     name: "Perseverance Rover",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/PIA24428-Mars_Perseverance_Rover-Artist%27s_Rendering-20200217.jpg",
+    image: "data:image/jpeg;base64,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",
     info: "Perseverance landed on Mars in 2021 to search for signs of ancient life. It explores the Jezero Crater, collecting soil samples for future return missions. The rover also carries advanced instruments and deployed the Ingenuity helicopter."
   },
   {
     name: "Curiosity Rover",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg",
+    image: "https://cdn.mos.cms.futurecdn.net/n7CYgJw4nijqUgSKdtm9aW.jpg",
     info: "Curiosity has been exploring Mars since 2012, studying rocks, minerals, and climate. Its findings confirmed that ancient Mars had water and conditions suitable for life. The rover continues climbing Mount Sharp to reveal Mars’ geological history."
   },
   {
     name: "Ingenuity Helicopter",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Ingenuity_Helicopter_on_Mars.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXeGGYA5M8xbHxSCiRY-eRPhEEUNse66YaoQ&s",
     info: "Ingenuity became the first aircraft to fly on another planet in 2021. Its flights proved that powered flight is possible in Mars’ thin atmosphere. Originally planned for 5 flights, it exceeded expectations with dozens of successful missions."
   },
   {
     name: "Orion Capsule (Artemis)",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Artemis_I_Orion_return_recovery.jpg",
+    image: "https://www.dlr.de/en/images/missions/mare/orion-mare-crew/@@images/image-1920-c24811841dfb85b9368813c2ddca844f.jpeg",
     info: "Orion is NASA’s deep-space crew vehicle designed for the Artemis missions. It can carry astronauts beyond the Moon and potentially toward Mars. The capsule features advanced life-support systems and high-speed re-entry protection."
   },
   {
     name: "SpaceX Starship",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Starship_SN9.jpg",
+    image: "https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg?resize=1200,800",
     info: "Starship is SpaceX’s fully reusable spacecraft intended for Mars colonization. Its powerful Super Heavy booster enables massive payload capacity. Starship aims to revolutionize deep-space travel, lunar missions, and cargo transport."
   },
   {
     name: "SpaceX Falcon 9",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Falcon_9_first_stage_landing_%28SES-10%29.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-uCzTR1lRsR1KnDqO_z7MOwvjOKMe90BX-g&s",
     info: "Falcon 9 is famous for its reusable first-stage landings. It has launched satellites, crew missions, and cargo to the ISS. Its reliability and reusability have drastically reduced the cost of access to space."
   },
   {
     name: "New Horizons Probe",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d8/New_Horizons_at_Pluto.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDQ_jivdCPpGs_ervijEkekvxm0Gn5aHWBiQ&s",
     info: "New Horizons made the first-ever flyby of Pluto in 2015, revealing stunning details of the dwarf planet. It later explored Kuiper Belt objects billions of kilometers away. Its mission continues to study the outer edges of the solar system."
   },
   {
     name: "Cassini Orbiter",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Cassini_Saturn_Orbit_Insertion.jpg",
+    image: "https://cdn.britannica.com/17/96617-050-7204B281/probe-Artwork-centre-orbiter-Huygens-Cassini-planet-June-30-2004.jpg",
     info: "Cassini explored Saturn for 13 years, capturing breathtaking images of its rings and moons. It discovered liquid seas on Titan and geysers on Enceladus. The mission ended with a dramatic dive into Saturn’s atmosphere in 2017."
   },
   {
     name: "Juno Orbiter",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Juno_-_PIA20701.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSaoOcekjYfC_lKdq9ux3_7lD1KVL6nuz2qg&s",
     info: "Juno studies Jupiter’s atmosphere, magnetic field, and deep interior. It has revealed stunning images of Jupiter’s storms and auroras. The spacecraft helps scientists understand how giant planets form and evolve."
   },
   {
     name: "Chandrayaan-3 Lander (Vikram)",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/32/Chandrayaan-3_Lander.jpg",
+    image: "https://www.bitsathy.ac.in/wp-content/uploads/Shiva-Sakthi-ASHOKAN-S-1.jpg",
     info: "India’s Vikram lander successfully touched down near the Moon’s south pole in 2023. It deployed the Pragyan rover to study lunar soil and environment. The mission marked a historic milestone for ISRO and global space exploration."
   },
   {
     name: "Aditya-L1",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Aditya-L1_at_L1_point.jpg",
+    image: "https://www.shutterstock.com/image-vector/illustration-rocket-spacecraft-going-aditya-600nw-2354584037.jpg",
     info: "Aditya-L1 is India’s first solar observatory positioned at the L1 point. It monitors solar flares, winds, and coronal mass ejections. The mission aims to improve our understanding of the Sun’s influence on space weather."
   },
   {
     name: "Mars Reconnaissance Orbiter",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Mars_Reconnaissance_Orbiter.jpg",
+    image: "https://science.nasa.gov/wp-content/uploads/2017/12/mars-reconnaissance-orbiter-pia04916.jpg",
     info: "MRO has been orbiting Mars since 2006, taking high-resolution images of the surface. It maps minerals, studies weather patterns, and searches for signs of water. Its HiRISE camera captures some of the sharpest images of Mars ever taken."
   },
   {
     name: "Kepler Space Telescope",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Kepler_space_telescope_artist_render_%282008%29.png",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/NASA-KeplerSpaceTelescope-ArtistConcept-20141027.jpg/500px-NASA-KeplerSpaceTelescope-ArtistConcept-20141027.jpg",
     info: "Kepler discovered thousands of exoplanets by observing tiny dips in starlight. Its data revolutionized our understanding of planetary systems. The mission proved that Earth-like planets are common throughout the galaxy."
   },
   {
     name: "Spitzer Space Telescope",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Spitzer_space_telescope.jpg",
+    image: "https://www.spitzer.caltech.edu/images/missing/articles/images/original.jpg",
     info: "Spitzer observed the universe in infrared light, revealing dust clouds, newborn stars, and distant galaxies. It helped detect exoplanet atmospheres and map cosmic structures. The mission operated from 2003 until 2020."
   },
   {
     name: "Rosetta Probe",
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Rosetta_-_artist%27s_view.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpDfcX08twpSNZ25ZQ706naHDvevy02uRTtA&s",
     info: "Rosetta was the first mission to orbit and land on a comet. It studied comet 67P’s surface, structure, and chemistry. Its findings gave new insights into the early solar system and origins of water and organics on Earth."
   }
 ];
