@@ -17,13 +17,17 @@ const QuizPage = () => {
     if (next < quizQuestions.length) {
       setCurrent(next);
     } else {
+      // ✅ QUIZ COMPLETED → increment quizCount
+      const currentCount =
+        Number(localStorage.getItem("quizCount")) || 0;
+      localStorage.setItem("quizCount", currentCount + 1);
+
       setShowScore(true);
     }
   };
 
   return (
-    
-    <div className="min-h-screen  text-white px-10 pt-28 pb-10">
+    <div className="min-h-screen text-white px-10 pt-28 pb-10">
 
       <h1 className="text-4xl font-bold mb-10">Space Quiz</h1>
 

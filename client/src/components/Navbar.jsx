@@ -37,11 +37,13 @@ export default function Navbar() {
     >
       {/* LEFT: LOGO */}
       <div className="flex items-center gap-2 cursor-pointer">
-        <img
-          src={logo}
-          alt="GAGANA Logo"
-          className="scale-175 rounded-full h-10 w-auto drop-shadow-lg transition-transform duration-300 hover:scale-150"
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            alt="GAGANA Logo"
+            className="scale-175 rounded-full h-10 w-auto drop-shadow-lg transition-transform duration-300 hover:scale-150"
+          />
+        </Link>
       </div>
 
       {/* RIGHT: DESKTOP LINKS */}
@@ -62,7 +64,7 @@ export default function Navbar() {
         </Link>
         <Link
           ref={(el) => (navLinksRef.current[2] = el)}
-          to="/solar"
+          to="https://w21030911.nuwebspace.co.uk/graphics/assessment/"
           className="hover:text-gray-200 transition nav-link"
         >
           3D Solar
@@ -137,7 +139,7 @@ export default function Navbar() {
             Facts
           </Link>
           <Link
-            to="/solar"
+            to="https://w21030911.nuwebspace.co.uk/graphics/assessment/"
             className="text-white hover:text-gray-200"
             onClick={() => setOpen(false)}
           >

@@ -9,7 +9,17 @@
   background-repeat: no-repeat;
   z-index: -2;
   pointer-events: none !important;
+}
 
+.title {
+  font-family: "Iceland", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.bgimg {
+  background-image: url("/animations/background-large.jpg");
 }
 
 .nav-link {
@@ -40,8 +50,8 @@
   padding: 12px;
   margin-bottom: 14px;
   border-radius: 10px;
-  background: rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: white;
   transition: 0.2s;
 }
@@ -61,10 +71,10 @@
   color: white;
   font-weight: bold;
   transition: 0.2s;
-  box-shadow: 0 0 20px rgba(37,99,235,0.5);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
 }
 
 .auth-btn:hover {
   background: #1e40af;
-  box-shadow: 0 0 30px rgba(37,99,235,0.8);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.8);
 }

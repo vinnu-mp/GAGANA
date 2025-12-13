@@ -30,6 +30,106 @@ export const facts = [
       "In about 4.5 billion years, our galaxy will merge with Andromeda.",
   },
   {
+    title: "There is a giant cloud of alcohol in space",
+    description:
+      "A massive cloud near the constellation Aquila contains enough ethyl alcohol to fill billions of bottles.",
+  },
+  {
+    title: "A sunset on Mars appears blue",
+    description:
+      "Martian dust scatters sunlight differently, causing sunsets to glow blue instead of red.",
+  },
+  {
+    title: "The largest asteroid is nearly the size of a small planet",
+    description:
+      "Ceres, located in the asteroid belt, is about 940 km wide and is classified as a dwarf planet.",
+  },
+  {
+    title: "Stars don’t actually twinkle in space",
+    description:
+      "Twinkling happens because of Earth’s atmosphere; in space, stars shine steadily.",
+  },
+  {
+    title: "There may be a planet made of diamonds",
+    description:
+      "55 Cancri e is believed to have a carbon-rich composition, possibly forming diamond layers.",
+  },
+  {
+    title: "The coldest place in the universe is on Earth",
+    description:
+      "Scientists created temperatures colder than outer space in laboratory experiments near absolute zero.",
+  },
+  {
+    title: "The Sun will eventually become a white dwarf",
+    description:
+      "After exhausting its fuel, the Sun will shed its outer layers and leave behind a dense core.",
+  },
+  {
+    title: "One day on Earth is getting longer",
+    description:
+      "Earth’s rotation is gradually slowing, lengthening days by milliseconds over centuries.",
+  },
+  {
+    title: "There are rogue planets drifting through space",
+    description:
+      "These planets have been ejected from their star systems and wander the galaxy alone.",
+  },
+  {
+    title: "The Great Red Spot is shrinking",
+    description:
+      "Jupiter’s iconic storm has been slowly decreasing in size over the past century.",
+  },
+  {
+    title: "Space is not completely empty",
+    description:
+      "Even in the deepest vacuum, there are particles, radiation, and quantum fluctuations.",
+  },
+  {
+    title: "A neutron star can bend light like a lens",
+    description:
+      "Its extreme gravity can warp spacetime enough to visibly distort background stars.",
+  },
+  {
+    title: "There could be oceans beneath icy moons",
+    description:
+      "Moons like Europa and Enceladus may harbor subsurface oceans capable of supporting life.",
+  },
+  {
+    title: "The universe is expanding faster over time",
+    description:
+      "Dark energy is causing galaxies to move away from each other at accelerating speeds.",
+  },
+  {
+    title: "Astronauts grow taller in space",
+    description:
+      "Microgravity allows the spine to stretch, making astronauts up to 5 cm taller temporarily.",
+  },
+  {
+    title: "The largest known star could engulf Jupiter",
+    description:
+      "UY Scuti is so massive that if placed at the Sun’s position, it would extend beyond Jupiter’s orbit.",
+  },
+  {
+    title: "There are galaxies with no stars",
+    description:
+      "Some galaxies consist mostly of dark matter and contain very few or no visible stars.",
+  },
+  {
+    title: "Venus may have once had oceans",
+    description:
+      "Evidence suggests Venus could have had liquid water billions of years ago before extreme heating.",
+  },
+  {
+    title: "Cosmic rays constantly pass through your body",
+    description:
+      "High-energy particles from space strike Earth and even pass harmlessly through humans.",
+  },
+  {
+    title: "The observable universe is only a fraction of the whole",
+    description:
+      "There may be regions of the universe beyond what we can ever observe due to cosmic expansion.",
+  },
+  {
     title: "Light from the Sun takes 8 minutes to reach Earth",
     description:
       "Even at the speed of light, it takes time for sunlight to travel the 150 million kilometers to us.",

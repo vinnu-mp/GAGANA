@@ -22,6 +22,10 @@ export default function AiPage() {
   const sendMessage = async () => {
     if (!input.trim()) return;
 
+    // ✅ STEP 3: Increment AI chat count (USER message only)
+    const currentChats = Number(localStorage.getItem("aiChats")) || 0;
+    localStorage.setItem("aiChats", currentChats + 1);
+
     const userMsg = { sender: "user", text: input.trim() };
     setMessages((prev) => [...prev, userMsg]);
 
@@ -50,7 +54,7 @@ export default function AiPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col p-6 bg-gradient-to-b from-black via-[#030617] to-black text-white">
+    <div className="min-h-screen flex flex-col p-6 bg-linear-to-b from-black via-[#030617] to-black text-white">
       <h1 className="text-3xl font-bold text-center mb-6">
         🚀 GAGANA AI — Space Assistant
       </h1>
