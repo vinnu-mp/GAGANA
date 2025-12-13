@@ -34,27 +34,39 @@ export default function Login() {
   };
 
   return (
-    <div className="h-screen bg-black w-full flex items-center justify-center relative text-white">
-
+    <div className="h-screen bgimg w-full flex items-center justify-center relative text-white">
       <div className="auth-card relative z-10 p-8 w-96 rounded-2xl">
         <h2 className="text-3xl mb-6 text-center font-semibold tracking-wide">
           Login
         </h2>
 
-        <input className="auth-input" name="email" placeholder="Email" onChange={handleChange} />
-        <input className="auth-input" name="password" type="password" placeholder="Password" onChange={handleChange} />
+        <input
+          className="auth-input"
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+        />
+        <input
+          className="auth-input"
+          name="password"
+          type="password"
+          placeholder="Password"
+          onChange={handleChange}
+        />
 
-        {error && (
-          <p className="text-red-400 text-center py-2">{error}</p>
-        )}
+        {error && <p className="text-red-400 text-center py-2">{error}</p>}
 
-        <button className="auth-btn" onClick={submitLogin}>Continue</button>
+        <button className="auth-btn" onClick={submitLogin}>
+          Continue
+        </button>
 
-        <p className="mt-4 text-center text-blue-300 cursor-pointer" onClick={() => navigate("/signup")}>
+        <p
+          className="mt-4 text-center text-blue-300 cursor-pointer"
+          onClick={() => navigate("/signup")}
+        >
           Create new account
         </p>
       </div>
-
     </div>
   );
 }

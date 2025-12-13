@@ -23,16 +23,16 @@ export default function VerifyOtp() {
   };
 
   return (
-    <div className="h-screen w-full flex items-center justify-center relative text-white">
+    <div className="h-screen w-full flex items-center justify-center bgimg relative text-white">
       <div className="absolute inset-0 bg-[url('/nebula-bg.jpg')] bg-cover bg-center"></div>
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 backdrop-blur-sm"></div>
 
       <div className="auth-card relative z-10 p-8 w-80 rounded-2xl">
         <h2 className="text-2xl mb-6 text-center font-semibold tracking-wide">
           Verify OTP
         </h2>
 
-        <input 
+        <input
           className="auth-input"
           placeholder="Enter OTP"
           onChange={(e) => setOtp(e.target.value)}
