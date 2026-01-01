@@ -1,2 +1,3 @@
 # GAGANA
-For codeRIT Hackathon
+A unified space learning platform
+
